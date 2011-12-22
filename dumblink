@@ -29,7 +29,7 @@ source = File.absolute_path(ARGV[0])
 target_dir = File.absolute_path(ARGV[1])
 amount = ARGV[2].to_i
 
-puts "Hardlinking #{amount} times to '#{source}' in '#{target_dir}'..."
+#puts "Hardlinking #{amount} times to '#{source}' in '#{target_dir}'..."
 
 for i in 0..(amount - 1) do
   File.link(source, (target_dir + "/link#{i}"))
